@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import { fetchCountryByName, fetchCountryByCode } from "../lib/api";
 
@@ -10,7 +10,6 @@ const CountryInfo = () => {
   const { name } = useParams();
   const [country, setCountry] = useState(null);
   const [borderCountries, setBorderCountries] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,13 +44,13 @@ const CountryInfo = () => {
 
   return (
     <div className="h-full">
-      <button
+      <Link
         className="flex justify-center align-middle gap-3 bg-light-elements dark:bg-dark-elements py-2 px-4 rounded-md shadow-md my-10 ml-5 md:ml-36 w-32"
-        onClick={navigate.back}
+        to="/"
       >
         <ArrowBack />
         <span>Back</span>
-      </button>
+      </Link>
       <div className="flex flex-col md:flex-row justify-center p-5 space-y-6 md:space-y-0 md:space-x-8 ">
         <div className="bg-light-elements dark:bg-dark-elements w-full md:w-1/3 h-auto flex justify-center w-1/2 p-4 mx-auto">
           <img
