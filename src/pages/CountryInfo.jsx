@@ -52,7 +52,7 @@ const CountryInfo = () => {
         <span>Back</span>
       </Link>
       <div className="flex flex-col md:flex-row justify-center p-5 space-y-6 md:space-y-0 md:space-x-8 ">
-        <div className="bg-light-elements dark:bg-dark-elements w-full md:w-1/3 h-auto flex justify-center w-1/2 p-4 mx-auto">
+        <div className="bg-light-elements dark:bg-dark-elements w-full md:w-1/3 h-auto flex justify-center p-4 mx-auto">
           <img
             src={country.flags.png}
             alt={country.flags.alt}
